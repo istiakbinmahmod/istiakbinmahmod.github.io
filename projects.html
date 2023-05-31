@@ -1,0 +1,114 @@
+---
+layout: default
+title: Projects
+---
+
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-8 col-sm-offset-2 section-container-spacer">
+        <div class="text-center">
+          <h1 class="h2">Projects</h1>
+          <p>Welcome to my portfolio! Below you'll find a list of my projects along with their respective GitHub and
+            documentation links, if available:
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+
+        <div id="myCarousel" class="carousel slide projects-carousel">
+          <!-- Carousel items -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="row">
+
+                {% for project in site.projects %}
+                <div class="col-sm-4">
+
+                  {% if project.vdlink %}
+                  <a href={{project.vdlink}} title="" class="black-image-project-hover" target="_blank"
+                    rel="noopener noreferrer">
+                    <img width="500" height="200" src={{project.img}} alt="" class="img-responsive">
+                  </a>
+                  {% else %}
+                  <a href="#" title="" class="black-image-project-hover">
+                    <img width="500" height="200" src={{project.img}} alt="" class="img-responsive">
+                  </a>
+                  {% endif %}
+                  <div class="card-container card-container-lg">
+                    <!-- <h4>001/006</h4> -->
+                    <h3>{{project.title}}</h3>
+                    <p>{{project.description}}</p>
+                    <a href={{project.ghlink}} title="" class="btn btn-default">
+                      Github Link <i class="fa fa-github"></i>
+                    </a>
+                    <!-- space  -->
+                    <br>
+                    <br>
+                    {% if project.vdlink %}
+                    <a href={{project.vdlink}} title="" class="btn btn-default" target="_blank"
+                      rel="noopener noreferrer">
+                      Video Link <i class="fa fa-video-camera"></i>
+                    </a>
+                    {% endif %}
+                  </div>
+                </div>
+                {% endfor %}
+
+                <!-- <div class="col-sm-4">
+  
+                        <a href="./work.html" title="" class="black-image-project-hover">
+                          <img src="./img/projects/work01-hover.jpg" alt="" class="img-responsive">
+                        </a>
+                        <div class="card-container card-container-lg">
+                          <h3>Fringilla sit amet</h3>
+                          <p>Nulla facilisi. Vivamus vestibulum, elit in scelerisque ultricies.</p>
+                          <a href="./work.html" title="" class="btn btn-default">Discover</a>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <a href="./work.html" title="" class="black-image-project-hover">
+                          <img src="./img/projects/work02-hover.jpg" alt="" class="img-responsive">
+                        </a>
+                        <div class="card-container card-container-lg">
+                          <h3>Nulla scelerisque</h3>
+                          <p>Proin pharetra metus id iaculis dignissim. In aliquet lorem ut ex ullamcorper.</p>
+                          <a href="./work.html" title="" class="btn btn-default">Discover</a>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <a href="./work.html" title="" class="black-image-project-hover">
+                          <img src="./img/projects/work03-hover.jpg" alt="" class="img-responsive">
+                        </a>
+                        <div class="card-container card-container-lg">
+                          <h3>Vivamus vestibulum</h3>
+                          <p>Fusce sed hendrerit augue, a rhoncus velit. In non lorem mattis, tempor sem sit amet.</p>
+                          <a href="./work.html" title="" class="btn btn-default">Discover</a>
+                        </div>
+                      </div> -->
+
+
+              </div>
+              <!--/row-->
+            </div>
+
+            <!--/item-->
+          </div>
+          <!--/carousel-inner-->
+          <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+  
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a> -->
+        </div>
+
+
+
+        <!--/myCarousel-->
+      </div>
+
+
+
+    </div>
+  </div>
+</div>

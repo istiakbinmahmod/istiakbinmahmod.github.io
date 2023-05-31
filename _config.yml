@@ -1,0 +1,16 @@
+name: Istiak Bin mahmod
+# permalink: /:title/
+# baseurl: https://kylieying.com
+# baseurl: ""
+permalink: /blog/:title
+
+# seo tag
+plugins:
+  - jekyll-seo-tag
+
+collections:
+  projects:
+    output: true
+
+# Google Analytics
+google_analytics: G-TEEDE1GB8S
