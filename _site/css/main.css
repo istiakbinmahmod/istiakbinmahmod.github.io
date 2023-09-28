@@ -35,6 +35,16 @@ body {
   color: gray;
 }
 
+/* Experience area -------------------------------------------------------------------- */
+#experience {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#experience li {
+  margin-bottom: 0rem;
+}
+
 /* Projects area -------------------------------------------------------------------- */
 .embed-container {
   position: relative;
