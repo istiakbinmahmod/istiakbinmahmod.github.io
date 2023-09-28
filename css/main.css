@@ -521,3 +521,7 @@ dd {
   background-color: #1585cf;
   opacity: .8;
 }
+
+.circular-image {
+  border-radius: 50%;
+}
