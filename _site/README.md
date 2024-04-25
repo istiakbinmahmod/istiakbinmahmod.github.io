@@ -1,6 +1,10 @@
 ## My Portfolio Website
-- This repository contains a portfolio website about me
-- To test this repository locally run `jekyll serve` command
-- The above command will run the webpage in `localhost:4000` port
-- My website is hosted at [`istiakbinmahmod@github.io`](https://istiakbinmahmod.github.io/)
-- Good day amigos! Shoot me your thoughts at my inbox [`istiakmahmod842@gmail.com`](mailto:istiakmahmod842@gmail.com)
+- This repository contains code for my repository website
+- To make a portfolio website like this, clone this repo by running the following command :\
+  `git clone https://github.com/istiakbinmahmod/istiakbinmahmod.github.io`
+- To test the webpage locally, run the following command from the root directory:\
+  `jekyll build && jekyll serve`
+- My portfolio website url: [`istiakbinmahmod.github.io`](https://istiakbinmahmod.github.io)
+- To shoot me with your thoughts, mail me at [`istiakmahmod842@gmail.com`](mailto:istiakmahmod842@gmail.com)
+
+`Have a good day amigos!`
