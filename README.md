@@ -1,7 +1,5 @@
 ## My Portfolio Website
 - This repository contains code for my repository website
-- To make a portfolio website like this, clone this repo by running the following command :\
-  `git clone https://github.com/istiakbinmahmod/istiakbinmahmod.github.io`
 - To test the webpage locally, run the following command from the root directory:\
   `jekyll build && jekyll serve`
 - My portfolio website url: [`istiakbinmahmod.github.io`](https://istiakbinmahmod.github.io)
