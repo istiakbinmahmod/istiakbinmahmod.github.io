@@ -35,6 +35,10 @@ body {
   color: gray;
 }
 
+.cgpa {
+  color: rgb(77, 75, 75);
+}
+
 /* Experience area -------------------------------------------------------------------- */
 #experience {
   list-style-type: none;
