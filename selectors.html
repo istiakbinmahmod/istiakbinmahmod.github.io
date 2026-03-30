@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selector Test Page</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 40px;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        h2 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #888;
+            margin: 40px 0 12px;
+            border-top: 1px solid #ddd;
+            padding-top: 16px;
+        }
+
+        h2 span {
+            background: #222;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-left: 8px;
+            font-size: 0.7rem;
+        }
+
+        h2 .no {
+            background: #e74c3c;
+        }
+
+        h2 .yes {
+            background: #27ae60;
+        }
+
+        .box {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 4px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        section {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="font-size: 1.2rem; margin-bottom: 4px">
+        CSS Selector Test Page
+    </h1>
+    <p style="font-size: 0.8rem; color: #888; margin-bottom: 8px">
+        For Optimizely Visual Editor · html-rewriter compatibility
+    </p>
+
+    <h2>Class selector</h2>
+    <section>
+        <span class="box promo-badge">class="promo-badge"</span>
+        <span class="box promo-badge">class="promo-badge"</span>
+        <span class="box">no promo-badge class</span>
+    </section>
+
+    <h2>ID selector</h2>
+    <section>
+        <div class="box" id="hero-title">id="hero-title"</div>
+        <div class="box" id="cta-button">id="cta-button"</div>
+    </section>
+
+    <h2>Attribute selector</h2>
+    <section>
+        <button class="box" data-variant="control">data-variant="control"</button>
+        <button class="box" data-variant="treatment">
+            data-variant="treatment"
+        </button>
+        <a class="box" href="https://example.com">href="https://example.com"</a>
+        <input class="box" type="submit" value='type="submit"' />
+    </section>
+
+    <h2>Child combinator (&gt;)</h2>
+    <section>
+        <div class="box" id="nav-wrapper" style="padding: 12px">
+            #nav-wrapper
+            <span class="box" style="display: block; margin-top: 8px">direct child &lt;span&gt;</span>
+            <div style="
+            margin-top: 6px;
+            padding: 8px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            font-size: 0.75rem;
+          ">
+                nested &lt;div&gt;
+                <span class="box" style="display: block; margin-top: 6px">grandchild &lt;span&gt; (not a direct child of
+                    #nav-wrapper)</span>
+            </div>
+        </div>
+    </section>
+
+    <h2>Descendant combinator (space)</h2>
+    <section>
+        <div class="box" id="sidebar" style="padding: 12px">
+            #sidebar
+            <ul style="margin: 8px 0 0 16px; font-size: 0.82rem">
+                <li class="box" style="margin: 4px 0">
+                    descendant &lt;li&gt; — depth 1
+                </li>
+                <li style="
+              margin: 4px 0;
+              padding: 6px;
+              background: #fafafa;
+              border: 1px solid #ddd;
+              border-radius: 4px;
+            ">
+                    parent &lt;li&gt;
+                    <ul style="margin: 6px 0 0 16px">
+                        <li class="box" style="margin: 4px 0">
+                            descendant &lt;li&gt; — depth 2
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <h2>Adjacent sibling (+) </h2>
+    <section>
+        <span class="box trigger-el">trigger element</span>
+        <span class="box">+ adjacent sibling</span>
+        <span class="box">general sibling</span>
+    </section>
+
+    <h2>General sibling (~) </h2>
+    <section>
+        <div class="box anchor-el">anchor element</div>
+        <div class="box">~ sibling 1</div>
+        <div class="box">~ sibling 2</div>
+    </section>
+
+    <h2>
+        Pseudo-class (:nth-child, :first-child, :not, etc.)
+    </h2>
+    <section>
+        <ul style="
+          list-style: none;
+          display: flex;
+          gap: 6px;
+          flex-wrap: wrap;
+          padding: 0;
+          margin: 0;
+        ">
+            <li class="box">li:first-child</li>
+            <li class="box">li:nth-child(2)</li>
+            <li class="box">li:last-child</li>
+            <li class="box special">li:not(.special)</li>
+        </ul>
+    </section>
+
+    <h2>
+        Pseudo-element (::before, ::after)
+    </h2>
+    <section>
+        <div class="box" id="badge-el">
+            element with ::before / ::after content
+        </div>
+    </section>
+
+    <h2>
+        Attribute substring ([attr^=], [attr$=], [attr*=])
+    </h2>
+    <section>
+        <a class="box" href="https://shop.example.com">[href^="https"]</a>
+        <a class="box" href="/downloads/report.pdf">[href$=".pdf"]</a>
+        <a class="box" href="/docs/api-reference">[href*="docs"]</a>
+    </section>
+</body>
+
+</html>
